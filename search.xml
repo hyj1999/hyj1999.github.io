@@ -4,11 +4,144 @@
   
     
     <entry>
+      <title>markdown数学符号汇总</title>
+      <link href="2021/02/22/markdown-shu-xue-fu-hao-hui-zong/"/>
+      <url>2021/02/22/markdown-shu-xue-fu-hao-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">^表示上标，_表示下标，如果上（下）标内容多于一个字符就需要使用{}，注意不是( ), 因为( )经常是公式本身组成部分，为避免冲突，所以选用了{ } 将其包起来。示例：$x^{y^z}=(1+e^x)^{-2xy^w}$效果：xyz=(1+ex)−2xyw 上面输入的上下标都是在字符的右侧，要想在左侧或者两侧都写上下标，那么需要使用\sideset语法。示例：$\sideset{^1_2}{^3_4}\bigotimes$效果：12⨂34 3.3 括号和分隔符( )和[ ]就是自身了，由于{ } 是Tex的元字符，所以表示它自身时需要转义。示例：$f(x,y) = x^2 + y^2, x\epsilon[0,100]$效果：f(x,y)=x2+y2,xϵ[0,100] 有时候括号需要大号的，普通括号不好看，此时需要使用\left和\right加大括号的大小。示例：$(\frac{x}{y})^8，\left(\frac{x}{y}\right)^8$效果：(xy)8，(xy)8 \left和\right必须成对出现，对于不显示的一边可以使用 . 代替。示例：$\left.\frac{{\rm d}u}{{\rm d}x} \right| _{x=0}$效果：dudx∣∣x=0 3.4 分数使用\frac{分子}{分母}格式，或者 分子\over 分母。示例：$\frac{1}{2x+1}或者1\over{2x+1}$效果：12x+1或者12x+1 3.5 开方示例：$\sqrt[9]{3}和\sqrt{3}$效果：3‾‾√9 和 3‾‾√ 3.6 省略号有两种省略号，\ldots 表示语文本底线对其的省略号，\cdots表示与文本中线对其的省略号。示例：$f(x_1, x_2, \ldots, x_n)=x_1^2 + x_2^2+ \cdots + x_n^2$效果：f(x1,x2,…,xn)=x21+x22+⋯+x2n 3.7 矢量示例：$\vec{a} \cdot \vec{b}=0$效果: a⃗ ⋅b⃗ =0 3.8 积分示例：$\int_0^1x^2{\rm d}x $效果： ∫10x2dx 3.9 极限示例：$\lim_{n\rightarrow+\infty}\frac{1}{n(n+1)}$效果： limn→+∞1n(n+1) 3.10 累加、累乘示例：$\sum_1^n\frac{1}{x^2}，\prod_{i=0}^n\frac{1}{x^2}$效果：∑n11x2， ∏ni=01x2 3.11 希腊字母希腊字符示例：$$\alpha　A　\beta　B　\gamma　\Gamma　\delta　\Delta　\epsilon　E \varepsilon　　\zeta　Z　\eta　H　\theta　\Theta　\vartheta \iota　I　\kappa　K　\lambda　\Lambda　\mu　M　\nu　N \xi　\Xi　o　O　\pi　\Pi　\varpi　　\rho　P \varrho　　\sigma　\Sigma　\varsigma　　\tau　T　\upsilon　\Upsilon \phi　\Phi　\varphi　　\chi　X　\psi　\Psi　\omega　\Omega$$效果：α　A　β　B　γ　Γ　δ　Δ　ϵ　Eε　　ζ　Z　η　H　θ　Θ　ϑι　I　κ　K　λ　Λ　μ　M　ν　Nξ　Ξ　o　O　π　Π　ϖ　　ρ　Pϱ　　σ　Σ　ς　　τ　T　υ　Υϕ　Φ　φ　　χ　X　ψ　Ψ　ω　Ω3.12 数学符号大汇总± ：\pm × ：\times ÷：\div ∣：\mid⋅：\cdot ∘：\circ ∗: \ast ⨀：\bigodot ⨂：\bigotimes ⨁：\bigoplus ≤：\leq ≥：\geq ≠：\neq ≈：\approx ≡：\equiv ∑：\sum ∏：\prod ∐：\coprod集合运算符： ∅：\emptyset ∈：\in ∉：\notin ⊂：\subset ⊃ ：\supset ⊆ ：\subseteq ⊇ ：\supseteq ⋂ ：\bigcap ⋃ ：\bigcup ⋁ ：\bigvee ⋀ ：\bigwedge ⨄ ：\biguplus ⨆：\bigsqcup对数运算符： log ：\log lg ：\lg ln ：\ln三角运算符： ⊥：\bot ∠：\angle 30∘：30^\circ sin ：\sin cos ：\cos tan ：\tan cot ：\cot sec ：\sec csc ：\csc微积分运算符： y′x：\prime ∫：\int ∬ ：\iint ∭ ：\iiint ⨌：\iiiint ∮ ：\oint lim ：\lim ∞ ：\infty ∇：\nabla逻辑运算符： ∵：\because ∴ ：\therefore ∀ ：\forall ∃ ：\exists ≠ ：\not= ≯：\not&gt; ⊄：\not\subset戴帽符号： ŷ ：\hat{y} yˇ：\check{y} y˘：\breve{y}连线符号： a+b+c+d⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯：\overline{a+b+c+d} a+b+c+d⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯：\underline{a+b+c+d} a+b+c⏟1.0+d2.0：\overbrace{a+\underbrace{b+c}_{1.0}+d}^{2.0}箭头符号： ↑：\uparrow ↓：\downarrow ⇑ ：\Uparrow ⇓：\Downarrow →：\rightarrow ← ：\leftarrow ⇒ ：\Rightarrow ⇐ ：\Leftarrow ⟶ ：\longrightarrow ⟵ ：\longleftarrow ⟹：\Longrightarrow ⟸ ：\Longleftarrow3.13 需要转义的字符要输出字符　空格　#　$　%　&amp;　<span class="token italic"><span class="token punctuation">_</span><span class="token content">　{　}　，用命令：　\空格　#　\$　\%　\&amp;　</span><span class="token punctuation">_</span></span>　{　}3.14 使用指定字体{\rm text}如： 使用罗马字体：text text 其他的字体还有： \rm　　罗马体　　　　　　　\it　　意大利体 \bf　　黑体　　　　　　　　\cal 　花体 \sl　　倾斜体　　　　　　　\sf　　等线体 \mit 　数学斜体　　　　　　\tt　　打字机字体 \sc　　小体大写字母<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言编程知识总结——选择结构程序设计</title>
+      <link href="2021/02/22/c-yu-yan-bian-cheng-zhi-shi-zong-jie/"/>
+      <url>2021/02/22/c-yu-yan-bian-cheng-zhi-shi-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第四章-emsp-选择结构程序设计"><a href="#第四章-emsp-选择结构程序设计" class="headerlink" title="第四章   选择结构程序设计"></a>第四章   选择结构程序设计</h2><h3 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h3><ul><li>结合性均为<strong>左结合</strong>  </li><li><code>&lt;</code>、<code>&lt;=</code>、<code>&gt;</code>、<code>&gt;=</code>的优先级相同，高于<code>==</code>和<code>!=</code>，<code>==</code>和<code>!=</code>的优先级相同</li><li><p>优先级:  赋值运算符 &lt; <strong>关系运算符</strong> &lt; 算术运算符</p><p>  <strong>特别注意：</strong> <code>==</code> 与 <code>=</code> 。 尤其在 <code>if</code> 条件判断中。</p></li></ul><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><ul><li><code>&amp;&amp;</code>  和 <code>||</code> 均为 <strong>双目运算符</strong> , 具有<strong>左结合</strong>性</li><li><code>!</code> 为 <strong>单目运算符</strong> ， 具有<strong>右结合</strong>性</li><li>优先级:  <strong><code>!</code></strong> &gt; 算术运算符 &gt; 关系运算符 &gt; <strong><code>&amp;&amp;</code></strong> &gt; <strong><code>||</code></strong> &gt; 赋值运算符 </li><li>先决与 、 先决或</li></ul><h3 id="if-语句的嵌套"><a href="#if-语句的嵌套" class="headerlink" title="if 语句的嵌套"></a><code>if</code> 语句的嵌套</h3><ul><li><code>else</code> 总是与它前面最近的未配对的 <code>if</code> 配对</li></ul><h3 id="条件运算符"><a href="#条件运算符" class="headerlink" title="条件运算符"></a>条件运算符</h3><ul><li>优先级：<code>!</code> &gt; 算术运算符 &gt; 关系运算符 &gt; <code>&amp;&amp;</code> &gt; <code>||</code> &gt; <strong>条件运算符</strong> &gt; 赋值运算符</li><li><code>a&gt;b?a:b+1</code> 应理解为 <code>a&gt;b?a:(b+1)</code> , 而不是 <code>(a&gt;b?a:b)+1</code></li><li>结合方向: <strong>自右至左</strong><br>例如：<code>a&gt;b?a:c&gt;d?c:d</code> 应理解为 <code>a&gt;b?a:(c&gt;d?c:d)</code></li></ul><h3 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a><code>switch</code> 语句</h3><p>格式：<br></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">switch(表达式){case 常量表达式1: 语句1;case 常量表达式2: 语句2;…case 常量表达式n: 语句n;default : 语句n+1;}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>  当表达式的值与某个常量表达式的值相等时，执行其后的语句，然后<strong>不再进行判断</strong>，继续执行下面<strong>所有</strong> <code>case</code> 后的语句。<br>  如果表达式的值与所有case 后常量表达式的值均不相等，则执行 <code>default</code> 后的语句。<p></p><ul><li><code>switch</code> 后面的表达式<strong>两边的括号不能省略</strong></li><li><code>case</code> 后面的常量表达式中<strong>不能出现变量</strong>，且类型必须是<strong>整型</strong>、<strong>字符型</strong>或<strong>枚举型</strong>，各个常量表达式的值<strong>不能重复</strong>，且与 <code>case</code> 间要有空格隔开。</li><li><code>default</code> 为<strong>可选项</strong>，其与 <code>case</code> 语句的出现顺序没有严格限制，<strong>可出现在任何位置</strong>，不会影响执行结果。</li><li><code>case</code> 后面的语句可以是<strong>一条</strong>或<strong>多条</strong>语句，也可以<strong>为空</strong>。为多条语句时，<strong>可以不用{}</strong> 将它们括起来；为空时，程序执行到此会<strong>自动向下顺序执行</strong>，实现多个case 共用一组执行语句。</li><li>使用 <code>break</code> 语句跳出 <code>switch</code> 语句</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 大学课程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言编程易错题目</title>
+      <link href="2021/02/22/c-yu-yan-bian-cheng-yi-cuo-ti-mu/"/>
+      <url>2021/02/22/c-yu-yan-bian-cheng-yi-cuo-ti-mu/</url>
+      
+        <content type="html"><![CDATA[<h3 id="第1题"><a href="#第1题" class="headerlink" title="第1题"></a>第1题</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;void main(){ int a=1,b=2,t=0;if (a=0) t=a;a=b;b=t;printf(“%d,%d\n”,a,b);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果： 2，0</p><h3 id="第2题"><a href="#第2题" class="headerlink" title="第2题"></a>第2题</h3><p>以下错误的 <code>if</code> 语句是：<br>A.<code>if (x&gt;y);</code><br>B.<code>if (x= =y) x+=y;</code><br>C.<code>if (x!=y) scanf(“%d”,&amp;x) else scanf(“%d”,&amp;y);</code><br> D.<code>if (x&lt;y){x++;y++;}</code></p><pre><code>答案：C</code></pre><h3 id="第3题"><a href="#第3题" class="headerlink" title="第3题"></a>第3题</h3><p><code>C 语言</code> 对 <code>嵌套 if 语句</code> 的规定是：<code>else</code> 总是与<strong>__</strong>配对。<br>A.其之前最近的<code>if</code><br>B.第一个<code>if</code><br>C.缩进位置相同的<code>if</code><br>D.其前面最近的且尚未配对的<code>if</code></p><pre><code>答案：D</code></pre><h3 id="单选题"><a href="#单选题" class="headerlink" title="单选题"></a>单选题</h3><h5 id="第1题-（1-0分）-题号-681"><a href="#第1题-（1-0分）-题号-681" class="headerlink" title="第1题 （1.0分）  题号:681"></a>第1题 （1.0分）  题号:681</h5><p>以下运算符中优先级最低的是（）。<br>A:<code>&amp;&amp;</code><br>B:<code>&amp;</code><br>C:<code>||</code><br>D:<code>|</code>  </p><pre><code>答案：C</code></pre><h5 id="第2题-（1-0分）-题号-742"><a href="#第2题-（1-0分）-题号-742" class="headerlink" title="第2题 （1.0分）  题号:742"></a>第2题 （1.0分）  题号:742</h5><p>若fp是指向某文件的指针，且已读到此文件末尾,则库函数<code>feof(fp)</code>的返回值是（）。<br>A:<code>EOF</code><br>B:<code>0</code><br>C:非零值<br>D:<code>NULL</code></p><pre><code>答案：C</code></pre><h5 id="第3题-（1-0分）-题号-108"><a href="#第3题-（1-0分）-题号-108" class="headerlink" title="第3题 （1.0分）  题号:108"></a>第3题 （1.0分）  题号:108</h5><p>设C语言中，int类型数据占2个字节，则short类型数据占（）。<br>A:1个字节<br>B:2个字节<br>C:4个字节<br>D:8个字节</p><pre><code>答案：B</code></pre><h5 id="第4题-（1-0分）-题号-654"><a href="#第4题-（1-0分）-题号-654" class="headerlink" title="第4题 （1.0分）  题号:654"></a>第4题 （1.0分）  题号:654</h5><p>以下不能正确定义二维数组的选项是（）。<br>A:<code>int a[2][2]={{1},{2}};</code><br>B:<code>int a[][2]={1,2,3,4};</code><br>C:<code>int a[2][2]={{1},2,3};`D:`int a[2][]={{1,2},{3,4}};</code></p><pre><code>答案：D</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 大学课程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言编程实例02——数组（包括排序）</title>
+      <link href="2021/02/22/c-yu-yan-bian-cheng-shi-li-02-shu-zu-bao-gua-pai-xu/"/>
+      <url>2021/02/22/c-yu-yan-bian-cheng-shi-li-02-shu-zu-bao-gua-pai-xu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数组（包括排序）"><a href="#数组（包括排序）" class="headerlink" title="数组（包括排序）"></a>数组（包括排序）</h1><h3 id="定义与说明"><a href="#定义与说明" class="headerlink" title="定义与说明"></a>定义与说明</h3><ul><li>数组的下标只能是整型常量或整型表达式，<strong>不能是变量</strong>。</li><li>数组元素全为零时，定义时可以如下定义 <code>int a[100] = {0};</code></li><li>当给出数组全部值时，可以如下定义<code>int a[] = {1,2,3,4,5};</code></li></ul><h3 id="冒泡排序法"><a href="#冒泡排序法" class="headerlink" title="冒泡排序法"></a>冒泡排序法</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"#define N 5  void main(){    //变量定义    int i, j;    int a[N], t;    //提示信息    printf("Please enter %d numbers:\n",N);    //数据输入    for(i=0; i&lt;N; i++)        scanf("%d", &amp;a[i]);    //排序算法    for(i=0; i&lt;N-1; i++)        //N-1次排序        for(j=0; j&lt;N-1-i; j++)  //第一次比较N-1次，逐次递减        {            if(a[j]&gt;a[j+1])     //交换顺序（由小到大，由大到小改为&lt;号）            {                t = a[j];                a[j] = a[j+1];                a[j+1] = t;            }        }    //数据输出    for(i=0; i&lt;N; i++)        printf("%d  ", a[i]);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="选择排序法"><a href="#选择排序法" class="headerlink" title="选择排序法"></a>选择排序法</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"#define N 5void main(){    //变量定义    int i, j, t;    int a[N], k;    //提示信息    printf("Please enter %d numbers:\n",N);    //数据输入    for(i=0; i&lt;N; i++)        scanf("%d", &amp;a[i]);    //排序算法    for(i=0; i&lt;N-1; i++)        //N-1次选择    {        k = 0;                  //默认第一个数最大（小）        for(j=1; j&lt;N-i; j++)    //选择最大（小）数的角标            if(a[k]&lt;a[j])                k = j;        t = a[N-1-i];           //交换数据        a[N-1-i] = a[k];        a[k] = t;    }    //数据输出    for(i=0; i&lt;N; i++)        printf("%d  ", a[i]);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="数据插入"><a href="#数据插入" class="headerlink" title="数据插入"></a>数据插入</h3><p>在有序数组指定位置插入任意N个数</p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"#define N 5void main(){    //变量定义    int n[10+N] = {0,1,2,3,4,5,6,7,8,9};    int a[N], k;    int i;    //提示信息与数据输入    printf("Please enter the insertion location:\n");    scanf("%d", &amp;k);    printf("Please enter %d numbers:\n",N);    for(i=0; i&lt;N; i++)        scanf("%d", &amp;a[i]);    //数据插入    for(i=10-1; i&gt;=k; i--)        n[i+N] = n[i];    for(i=k; i&lt;k+N; i++)        n[i] = a[i-k];    //数据输出    for(i=0; i&lt;10+N; i++)        printf("%d  ", n[i]);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="数据删除"><a href="#数据删除" class="headerlink" title="数据删除"></a>数据删除</h3><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"void main(){    //变量定义    int n[10] = {0,1,2,3,4,5,6,7,8,9};    int k, i, j;    //提示信息与数据输入    printf("Please enter the data to be deleted:\n");    scanf("%d", &amp;k);    //数据删除（只删除第一个位置）    for(i=0; i&lt;10; i++)        if(n[i]==k)        {            for(j=i; j&lt;10-1; j++)                n[j] = n[j+1];            break;        }    //数据输出    if(i==10)        printf("Data not found!\n");    else        for(i=0; i&lt;10-1; i++)            printf("%d  ", n[i]);    } <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言编程实例01</title>
+      <link href="2021/02/22/c-yu-yan-bian-cheng-shi-li-01/"/>
+      <url>2021/02/22/c-yu-yan-bian-cheng-shi-li-01/</url>
+      
+        <content type="html"><![CDATA[<p><strong>1. 输出前 30 个素数，每行输出 6 个。</strong><br></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;#include &lt;math.h&gt;#define EACHLINECOUNT 6void main(){int i, k, num=2, n=0;while(n&lt;30){k = sqrt(num);for(i=2; i&lt;=k; i++)if(num%i==0)break;//如果是素数，输出if(i&gt;k){n++;printf("%4d",num);if( !(n%EACHLINECOUNT) )printf("\n");}num++;}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p></p><p><strong>2. 输出以下图案：</strong><br></p><pre class="line-numbers language-none"><code class="language-none">      *    * * *  * * * * ** * * * * * *  * * * * *    * * *      *<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;#define EACHLINECOUNT 6void main(){int i,j,k;for(i=0;i&lt;=3;i++){for(j=0;j&lt;3-i;j++)printf(" ");for(k=0;k&lt;2*i+1;k++)printf("*");printf("\n");}for(i=2;i&gt;=0;i--){for(j=0;j&lt;3-i;j++)printf(" ");for(k=0;k&lt;2*i+1;k++)printf("*");printf("\n");}}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>3. 分析以下程序，写出运行结果，并上机运行验证结果。</strong></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"void main(){ int a[]={2,4,6,8,10}, i, s=0;for(i=0;i&lt;3;i++)s += a[i+1];printf("%d\n",s);}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4. 阅读并实际上机验证下面程序的运行结果，说出程序完成的功能。</strong></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include "stdio.h"//删除连续重复数据，不是连续重复的无法删除void main(){ int a[80]={2,2,2,3,4,4,5,6,6,6,6,7,7,8,9,9,10,10,10}, j, n=19, k=1;// 输出原始数据printf("The original data:\n");for(j=0;j&lt;n;j++)printf("%3d ",a[j]);// 对原始数据进行处理和输出提示信息for(j=1;j&lt;n;j++)if(a[k-1]!=a[j])a[k++] = a[j];printf("\nThe data after deleted:\n"); // 输出处理后结果for(j=0;j&lt;k;j++)printf("%3d ",a[j]);printf("\n");}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>5. 假设一个数组中元素的值依次为 12，5，7，8，4，编写程序将其逆序放，变成 4，8，7，5，12。</strong></p><pre class="line-numbers language-C" data-language="C"><code class="language-C">#include &lt;stdio.h&gt;void main(){int a[]={12, 5, 7, 8, 4}, i, t, n;n = sizeof(a)/sizeof(a[0]);//输出原始数据printf("The original data:\n");for(i=0; i&lt;n; i++)printf("%4d",a[i]);//逆序排放,数组元素个数是奇数或偶数都可以for(i=0; i&lt;n/2; i++){t = a[i];a[i] = a[n-1-i];a[n-1-i] = t;}//输出结果printf("\nThe result data:\n");for(i=0; i&lt;n; i++)printf("%4d",a[i]);printf("\n");}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>创建博客相关资料</title>
       <link href="2021/02/22/chuang-jian-bo-ke-xiang-guan-zi-liao/"/>
       <url>2021/02/22/chuang-jian-bo-ke-xiang-guan-zi-liao/</url>
       
-        <content type="html"><![CDATA[<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><ul><li><p><a href="sunhwee.com/posts/6e8839eb.html#toc-heading-24">Hexo+Github博客搭建完全教程</a>     来源：<a href="https://sunhwee.com/">洪卫の博客</a></p></li><li><p><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">hexo-theme-matery  说明文档</a></p></li></ul><h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><p>以下为文章的 <code>Front-matter</code> 示例。</p><h3 id="最简示例"><a href="#最简示例" class="headerlink" title="最简示例"></a>最简示例</h3><pre class="line-numbers language-none"><code class="language-none">---title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="最全示例"><a href="#最全示例" class="headerlink" title="最全示例"></a>最全示例</h3><pre class="line-numbers language-none"><code class="language-none">---title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00author: 赵奇img: /source/images/xxx.jpgtop: truecover: truecoverImg: /images/1.jpgpassword: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92toc: falsemathjax: falsesummary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要categories: Markdowntags:  - Typora  - Markdown---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h2><ul><li><a href="sunhwee.com/posts/6e8839eb.html#toc-heading-24">Hexo+Github博客搭建完全教程</a>     来源：<a href="https://sunhwee.com/">洪卫の博客</a></li><li><a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">hexo-theme-matery  说明文档</a></li><li><a href="https://blog.csdn.net/qq_41496127/article/details/108749638">基于Hexo的Matery主题个人博客的部分个性化修改</a></li><li><a href="http://www.fontawesome.com.cn/faicons/">图标库</a></li></ul><h2 id="文章-Front-matter-介绍"><a href="#文章-Front-matter-介绍" class="headerlink" title="文章 Front-matter 介绍"></a>文章 Front-matter 介绍</h2><p>以下为文章的 <code>Front-matter</code> 示例。</p><h3 id="最简示例"><a href="#最简示例" class="headerlink" title="最简示例"></a>最简示例</h3><pre class="line-numbers language-none"><code class="language-none">---title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="最全示例"><a href="#最全示例" class="headerlink" title="最全示例"></a>最全示例</h3><pre class="line-numbers language-none"><code class="language-none">---title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00author: 赵奇img: /medias/featureimages/0.jpgtop: falsecover: falsecoverImg: /medias/banner/0.jpgpassword: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92toc: falsemathjax: falsesummary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要categories: Markdowntags:  - Typora  - Markdown---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="常用示例"><a href="#常用示例" class="headerlink" title="常用示例"></a>常用示例</h3><pre class="line-numbers language-none"><code class="language-none">---title: 自动控制理论系统校正img: /medias/featureimages/7.jpgtop: falsecover: falsecoverImg: /medias/featureimages/7.jpgtoc: falsemathjax: truecategories: 自动控制理论tags:  - 自动控制理论  - 系统校正---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="页面菜单栏图标个性化设置："><a href="#页面菜单栏图标个性化设置：" class="headerlink" title="页面菜单栏图标个性化设置："></a>页面菜单栏图标个性化设置：</h2><p>matery主题中的小图标都是调用 <a href="http://www.fontawesome.com.cn/faicons上的图标，记住图标名称，引用的时候直接写就行了，格式如下：">http://www.fontawesome.com.cn/faicons上的图标，记住图标名称，引用的时候直接写就行了，格式如下：</a></p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>tv<span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>play<span class="token key atrule">icon</span><span class="token punctuation">:</span> fas fa<span class="token punctuation">-</span>mouse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       <categories>
@@ -67,6 +200,143 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>锁存器和触发器</title>
+      <link href="2020/08/24/suo-cun-qi-yu-hong-fa-qi/"/>
+      <url>2020/08/24/suo-cun-qi-yu-hong-fa-qi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-锁存器（对电平信号敏感）"><a href="#1-锁存器（对电平信号敏感）" class="headerlink" title="1. 锁存器（对电平信号敏感）"></a>1. 锁存器（对电平信号敏感）</h2><h3 id="1-1-基本SR锁存器"><a href="#1-1-基本SR锁存器" class="headerlink" title="1.1 基本SR锁存器"></a>1.1 基本SR锁存器</h3><h4 id="1-1-1-或非门构成"><a href="#1-1-1-或非门构成" class="headerlink" title="1.1.1 或非门构成"></a>1.1.1 或非门构成</h4><div align="center"><img src="/medias/picture/锁存器img/或非门构成基本SR锁存器.png" width="50%"></div><h4 id="1-1-2-与非门构成"><a href="#1-1-2-与非门构成" class="headerlink" title="1.1.2 与非门构成"></a>1.1.2 与非门构成</h4><div align="center"><img src="/medias/picture/锁存器img/与非门构成基本SR锁存器.png" width="50%"></div><h4 id="1-1-3-应用"><a href="#1-1-3-应用" class="headerlink" title="1.1.3 应用"></a>1.1.3 应用</h4><div align="center"><img src="/medias/picture/锁存器img/消抖.png" width="70%"></div><h3 id="1-2-门控SR锁存器"><a href="#1-2-门控SR锁存器" class="headerlink" title="1.2 门控SR锁存器"></a>1.2 门控SR锁存器</h3><div align="center"><img src="/medias/picture/锁存器img/门控SR锁存器.png" width="50%"></div><h3 id="1-3-D锁存器"><a href="#1-3-D锁存器" class="headerlink" title="1.3 D锁存器"></a>1.3 D锁存器</h3><p><img src="/medias/picture/锁存器img/D锁存器.png" width="20%"></p><p>$E = 0$ $\rightarrow$ $Q与\overline Q状态不变（锁存）$<br>$E = 1$ $\rightarrow$ $Q = D$  $\overline Q = \overline D$  </p><h4 id="附：-74HC373（八D锁存器）"><a href="#附：-74HC373（八D锁存器）" class="headerlink" title="附： 74HC373（八D锁存器）"></a>附： 74HC373（八D锁存器）</h4><div align="center"><img src="/medias/picture/锁存器img/74HC373.png" width="100%"></div><h2 id="2-触发器（对边沿信号敏感）"><a href="#2-触发器（对边沿信号敏感）" class="headerlink" title="2 触发器（对边沿信号敏感）"></a>2 触发器（对边沿信号敏感）</h2><h3 id="2-1-D触发器"><a href="#2-1-D触发器" class="headerlink" title="2.1 D触发器"></a>2.1 D触发器</h3><p><img src="/medias/picture/锁存器img/D触发器逻辑符号.png" width="25%"></p><p>触发后输出状态与D相同</p><h4 id="2-1-1-特性方程"><a href="#2-1-1-特性方程" class="headerlink" title="2.1.1  特性方程"></a>2.1.1  特性方程</h4><script type="math/tex; mode=display">Q^{n+1} = D</script><h4 id="2-1-2-状态图"><a href="#2-1-2-状态图" class="headerlink" title="2.1.2 状态图"></a>2.1.2 状态图</h4><div align="center"><img src="/medias/picture/锁存器img/D触发器状态图.png" width="40%"></div><h3 id="2-2-JK触发器"><a href="#2-2-JK触发器" class="headerlink" title="2.2  JK触发器"></a>2.2  JK触发器</h3><p><img src="/medias/picture/锁存器img/JK触发器逻辑符号.png" width="25%"></p><p>触发后：</p><blockquote><p>JK不同  向J看齐<br>JK都是 1  翻转<br>JK都是 0  不变</p></blockquote><h4 id="2-2-1-特性方程"><a href="#2-2-1-特性方程" class="headerlink" title="2.2.1  特性方程"></a>2.2.1  特性方程</h4><script type="math/tex; mode=display">Q^{n+1} = J \overline{Q^n} + \overline{K} Q^n</script><h4 id="2-2-2-状态图"><a href="#2-2-2-状态图" class="headerlink" title="2.2.2 状态图"></a>2.2.2 状态图</h4><div align="center"><img src="/medias/picture/锁存器img/JK触发器状态图.png" width="50%"></div><h3 id="2-3-T触发器"><a href="#2-3-T触发器" class="headerlink" title="2.3 T触发器"></a>2.3 T触发器</h3><p><img src="/medias/picture/锁存器img/T触发器逻辑符号.png" width="25%"></p><p>触发后：</p><blockquote><p>T = 0  不变<br>T = 1  翻转</p></blockquote><h4 id="2-3-1-特性方程"><a href="#2-3-1-特性方程" class="headerlink" title="2.3.1  特性方程"></a>2.3.1  特性方程</h4><script type="math/tex; mode=display">Q^{n+1} = T \overline{Q^n} + \overline{T} Q^n</script><h4 id="2-3-2-状态图"><a href="#2-3-2-状态图" class="headerlink" title="2.3.2 状态图"></a>2.3.2 状态图</h4><div align="center"><img src="/medias/picture/锁存器img/T触发器状态图.png" width="50%"></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电子技术 </tag>
+            
+            <tag> 数电 </tag>
+            
+            <tag> 锁存器 </tag>
+            
+            <tag> 触发器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自动控制理论频域分析</title>
+      <link href="2020/05/04/pin-yu-fen-xi/"/>
+      <url>2020/05/04/pin-yu-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1><h2 id="频率特性的基本概念"><a href="#频率特性的基本概念" class="headerlink" title="频率特性的基本概念"></a>频率特性的基本概念</h2><p>幅频特性：$|G(j\omega)|$<br>相频特性：$\angle G(j\omega)$<br>频率特性：$G(j\omega)=|G(j\omega)|e^{\angle G(j\omega)}$</p><p><strong>获取：</strong> $G(j\omega)=G(s)|_{s=j\omega}$</p><h2 id="典型环节幅相频率特性曲线"><a href="#典型环节幅相频率特性曲线" class="headerlink" title="典型环节幅相频率特性曲线"></a>典型环节幅相频率特性曲线</h2><ul><li>比例环节</li><li>积分环节</li><li>惯性环节<ul><li>低通滤波</li></ul></li><li><p>振荡环节</p><ul><li>谐振</li></ul></li><li><p>一阶微分环节</p></li><li>二阶微分环节</li><li>不稳定惯性环节<ul><li>与惯性环节关于实轴对称</li></ul></li></ul><h2 id="控制系统幅相特性曲线绘制方法"><a href="#控制系统幅相特性曲线绘制方法" class="headerlink" title="控制系统幅相特性曲线绘制方法"></a>控制系统幅相特性曲线绘制方法</h2><p>略</p><h2 id="最小相位系统"><a href="#最小相位系统" class="headerlink" title="最小相位系统"></a>最小相位系统</h2><blockquote><p>只含左半平面零极点的系统</p></blockquote><p>规律略</p><h2 id="对数频率特性曲线"><a href="#对数频率特性曲线" class="headerlink" title="对数频率特性曲线"></a>对数频率特性曲线</h2><blockquote><p>伯德图</p></blockquote><ul><li>对数幅频特性曲线</li><li>对数相频特性曲线</li></ul><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>略</p><h2 id="典型环节对数频率特性曲线"><a href="#典型环节对数频率特性曲线" class="headerlink" title="典型环节对数频率特性曲线"></a>典型环节对数频率特性曲线</h2><ul><li>比例环节</li><li>积分环节</li><li>惯性环节</li><li>震荡环节</li><li>一阶微分环节</li><li>二阶微分环节</li><li>不稳定惯性环节</li></ul><h2 id="对数频率特性曲线绘制方法"><a href="#对数频率特性曲线绘制方法" class="headerlink" title="对数频率特性曲线绘制方法"></a>对数频率特性曲线绘制方法</h2><p>略</p><h2 id="根据特性曲线推导开环传递函数"><a href="#根据特性曲线推导开环传递函数" class="headerlink" title="根据特性曲线推导开环传递函数"></a>根据特性曲线推导开环传递函数</h2><p>略</p><h2 id="奈奎斯特稳定判据"><a href="#奈奎斯特稳定判据" class="headerlink" title="奈奎斯特稳定判据"></a>奈奎斯特稳定判据</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自动控制理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自动控制理论 </tag>
+            
+            <tag> 频域分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自动控制理论系统校正</title>
+      <link href="2020/05/04/xi-tong-xiao-zheng/"/>
+      <url>2020/05/04/xi-tong-xiao-zheng/</url>
+      
+        <content type="html"><![CDATA[<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ul><li>串联校正</li><li>顺馈校正</li><li>反馈矫正</li></ul><h2 id="常用校正装置"><a href="#常用校正装置" class="headerlink" title="常用校正装置"></a>常用校正装置</h2><ul><li>超前校正装置</li><li>滞后校正装置</li><li>滞后—超前校正装置</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自动控制理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自动控制理论 </tag>
+            
+            <tag> 系统校正 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关掉Visual studio在桌面上的右键的方法</title>
+      <link href="2020/05/04/guan-diao-visual-studio-zai-zhuo-mian-shang-de-you-jian-de-fang-fa/"/>
+      <url>2020/05/04/guan-diao-visual-studio-zai-zhuo-mian-shang-de-you-jian-de-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<h3 id="关掉Visual-studio在桌面上的右键的方法（在visual-studio中打开）"><a href="#关掉Visual-studio在桌面上的右键的方法（在visual-studio中打开）" class="headerlink" title="关掉Visual studio在桌面上的右键的方法（在visual studio中打开）"></a>关掉Visual studio在桌面上的右键的方法（在visual studio中打开）</h3><ol><li><p>Windows+R打开运行，输入regedit打开注册表编辑器。</p></li><li><p>你会看到HKEY_CLASSES_ROOT等一系列文件夹，点击打开此文件夹</p></li><li><p>在菜单栏下方有搜索框，在已有的HKEY_CLASSES_ROOT后面输入\Directory。结果是HKEY_CLASSES_ROOT\Directory。</p></li><li><p>在这个文件夹里可以找到HKEY_CLASSES_ROOT\Directory\Background\shell\AnyCode以及HKEY_CLASSES_ROOT\Directory\shell\AnyCode。</p></li></ol><blockquote><p>@C:\Program Files (x86)\Common Files\Microsoft Shared\MSEnv\2052\\VSLauncherUI.dll,-1002</p></blockquote><ol><li>把这两个文件夹点击右键删除掉就可以了。注意上方搜索框里面的情况，要与上文提到的两个路径吻合。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电脑操作技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电脑操作技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>INA219相关知识01</title>
+      <link href="2020/05/04/ina219/"/>
+      <url>2020/05/04/ina219/</url>
+      
+        <content type="html"><![CDATA[<h2 id="INA219"><a href="#INA219" class="headerlink" title="INA219"></a>INA219</h2><p><img src="/medias/picture/INA219img/图片1.png" width="70%"></p><div class="table-container"><table><thead><tr><th style="text-align:center">名称</th><th style="text-align:center">LSB</th><th style="text-align:center">备注</th></tr></thead><tbody><tr><td style="text-align:center">Shunt voltage</td><td style="text-align:center">10uV</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Current</td><td style="text-align:center">人为设定</td><td style="text-align:center">$Current_LSB_{min} = \frac{Maximum Expected Current}{2^{15}}$</td></tr><tr><td style="text-align:center">Voltage</td><td style="text-align:center">4mV</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">Power</td><td style="text-align:center">20* Current LSB</td><td style="text-align:center">-</td></tr></tbody></table></div><p>注意：shunt_voltage 和 Current  有符号</p><h4 id="LSB该怎么计算"><a href="#LSB该怎么计算" class="headerlink" title="LSB该怎么计算"></a>LSB该怎么计算</h4><p><strong>Current_LSB</strong><br>  先计算最大可接受电流  $Maximum Expected Current$   :  </p><script type="math/tex; mode=display">MaxPossible\_I = \frac{VSHUNT\_MAX }{ RSHUNT}</script><p>  所以需要计算$VSHUNT_MAX：$</p><p>  $VSHUNT_MAX$ 与 <code>PGA</code> 配置有关：这里选择 1/8增益 ，此时$VSHUNT_MAX = 0.32$</p><p>  这样就可计算出Maximum Expected Current，从而计算出Current_LSB。</p><p>  但此时Current_LSB不是一个较整的数，因此可以将它凑为一个整的数，这样的话最大可接受电流会发生变化，但相比于Current_LSB不是一个较整的数而言，这点影响会非常小。</p><h4 id="Calibration-Register"><a href="#Calibration-Register" class="headerlink" title="Calibration Register"></a>Calibration Register</h4><p>  计算：</p><script type="math/tex; mode=display">Calibration Register=trunc\left[ \frac{0.04096}{Current\_LSB \times R_{SHUNT}}\right]</script><p>  其中：$R_{SHUNT}$为采样电阻。</p><p>  如果测得电流不准，可以调节Calibration Register的值。</p><h4 id="时序（向寄存器发送数据、读取数据）："><a href="#时序（向寄存器发送数据、读取数据）：" class="headerlink" title="时序（向寄存器发送数据、读取数据）："></a>时序（向寄存器发送数据、读取数据）：</h4><p>起始 $\longrightarrow$ 写器件地址 <strong><em>W</em></strong> $\longrightarrow$ 写寄存器地址 $\longrightarrow$写数据 $\longrightarrow$ 结束信号</p><p>起始 $\longrightarrow$ 写器件地址 <strong><em>W</em></strong> $\longrightarrow$ 写寄存器地址 $\longrightarrow$ 起始 $\longrightarrow$ 写器件地址 <strong><em>R</em></strong> $\longrightarrow$ 读寄存器数据 $\longrightarrow$ 结束</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电子技术 </tag>
+            
+            <tag> INA219 </tag>
+            
+        </tags>
       
     </entry>
     
